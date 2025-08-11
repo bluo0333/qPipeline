@@ -1,0 +1,20 @@
+{
+  "name": "dp-service",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "bull": "^4.12.2",
+    "express": "^4.19.2",
+    "ioredis": "^5.3.2",
+    "limiter": "^3.1.0",
+    "mongoose": "^8.4.3",
+    "opossum": "^7.1.1",
+    "p-limit": "^4.0.0",
+    "prom-client": "^15.1.0"
+  }
+}

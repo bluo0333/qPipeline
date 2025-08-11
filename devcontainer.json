@@ -1,0 +1,27 @@
+{
+  "name": "Data Processing Service Dev",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "20" }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "forwardPorts": [3000, 27017, 6379, 6380, 6381, 6382, 6383, 6384],
+  "postCreateCommand": "npm ci || npm install",
+  "remoteEnv": {
+    "NODE_ENV": "development",
+    "MONGODB_URI": "mongodb://mongo:27017/dp",
+    "REDIS_PASSWORD": "",
+    "REDIS_CLUSTER_NODES": "redis-cluster:6379,redis-cluster:6380,redis-cluster:6381,redis-cluster:6382,redis-cluster:6383,redis-cluster:6384",
+    "PORT": "3000"
+  }
+}
